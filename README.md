@@ -1,4 +1,4 @@
-REQUIREMENTS:
+#REQUIREMENTS:
 
  - Node.js + npm
  - Express
@@ -8,7 +8,7 @@ REQUIREMENTS:
 
 
 
-/*** products-api  *******************/
+#products-api
 
 - start mongodb:
 
@@ -23,7 +23,7 @@ npm install
 npm start
 
 
-/*** Angular_ShoppingCart  *******************/
+#Angular_ShoppingCart
 
 
 - start app:
