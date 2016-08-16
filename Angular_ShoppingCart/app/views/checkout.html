@@ -1,0 +1,126 @@
+<div class="thankyou-page">
+    <div id="header-order-view" class="header-order-view">
+        <div class="header-order-content">
+            <div class="success-content">
+                <i class="wm-icon icon-ok-circled"></i>
+            </div>
+            <div class="order-description-content">
+                <p class="order-description">Seu pedido foi enviado com sucesso!</p>
+                <p class="order-description">Obrigado por comprar no Walmart</p>
+            </div>
+            <div class="order-number-content">
+                <p class="order-label">Número do pedido:</p>
+                <p class="order-number">348209384023</p>
+            </div>
+            <div id="order-number-wrapper-desktop" style="display:none;">
+                <span class="finish-order-number">348209384023</span>
+            </div>
+        </div>
+    </div>
+    <div id="order-resume-view" class="order-resume-view">
+        <div>
+            <h2 class="section-title">Resumo do pedido</h2>
+            <div class="order-payment order-resume-item">
+                <div>
+                    <div class="col-2 order-description-warning">
+                        <h3>Número do pedido:</h3>
+                        <span class="order-number">348209384023</span>
+                        <div class="description-wrapper">
+                            <p>Atenção: Você receberá um e-mail com a confirmação e todos os detalhes do seu pedido. Por favor, verifique as configurações AntiSpam do seu provedor de e-mail.</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <h3>Forma de pagamento</h3>
+                        <div id="paymentType">
+                            <div>
+                                <div>
+                                    <div class="check-card-wrapper clearfix">
+                                        <figure class="check-card-image">
+                                            <img class="img-responsive" src="//static.wmobjects.com.br/checkout/images/payment/MASTERCARD.png" alt="MASTERCARD">
+                                        </figure>
+                                        <div class="check-card-description">
+                                            <ul>
+                                                <li class="check-card-description-item">Nome:
+                                                    <span class="card-name">JOHN DOE</span>
+                                                </li>
+                                                <li class="check-card-description-item">Número:
+                                                    <span class="card-number">**** **** **** 5493</span>
+                                                </li>
+                                                <li class="check-card-description-item">
+                                                    Valor:
+                                                    <span class="card-value">
+                            
+                                {{Cart.totalValue | currency:"R$ "}}
+
+                                <br><span ng-if="Cart.discount > 0">Com desconto ({{Cart.discount}}%): {{Cart.priceAfterDiscount | currency:"R$ "}}</span>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-bankslip order-resume-item">
+            </div>
+            <div class="order-customer-delivery  order-resume-item">
+                <div class="col-2 order-customer-info">
+                    <h3><i class="icon-customer"></i> Seus dados</h3>
+                    <div class="col-2 order-customer-info-content">
+                        <p>John Doe</p>
+                        <p>(11) 2164-3750</p>
+                    </div>
+                    <div class="col-2 order-customer-info-content">
+                        <p>john.doe@email.com</p>
+                        <p>CPF: 290.511.368-54 </p>
+                    </div>
+                </div>
+                <div class="col-2 order-address-info">
+                    <h3><i class="icon-home"></i> Endereço de entrega</h3>
+                    <div class="order-address-info-content">
+                        <p>
+                            Alameda Araguaia, 2751 - Barueri - SP, 06455-906
+                        </p>
+                    </div>
+                </div>
+                <div class="col-1  order-delivery-info">
+                    <h3> <i class="icon-box"></i> Entrega</h3>
+                    <!-- começo de um pedido -->
+                    <div class="col-1 order-delivery-info-steps col-bottom-clear">
+                        <div class="col-2 title-delivery-desktop">
+                            <p></p>
+                        </div>
+                        <div class="col-2 title-delivery-mobile">
+                            <p></p>
+                        </div>
+                        <div class="col-2 order-delivery-estimate text-right">
+                            Entrega em até 4 dias úteis
+                        </div>
+                    </div>
+                    <div class="col-1 order-delivery-info-description col-bottom-clear">
+                        <div class="col-2">
+                            <p>Descrição do produto</p>
+                        </div>
+                        <div class="col-2 text-right">
+                            <p>Quantidade</p>
+                        </div>
+                    </div>
+                    <div class="col-1 order-delivery-info-items">
+                        <div class="col-1 col-bottom-clear item" ng-repeat="product in Cart.products">
+                            <div class="col-2">
+                                <li>{{product.NAME}}</li>
+                            </div>
+                            <div class="col-2 text-right order-info-quantities">
+                                {{product.QUANTITY}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="back-button register-btn btn btn-success" id="btn-finalize-cart" ng-click="go('/cart')">Voltar para lista de produtos</button>
+    </div>
+</div>

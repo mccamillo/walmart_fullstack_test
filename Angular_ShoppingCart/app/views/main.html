@@ -1,0 +1,64 @@
+<div class="wrapper foo">
+    <section class="main-content my-cart">
+        <div>
+            <div class="page-title clearfix">
+                <h2>Cadastro de produtos</h2>
+            </div>
+            <fieldset id="codes">
+                <legend>Exemplos de produtos:</legend>
+                <code>
+                {
+                  IMAGE_URL : 'https://static.wmobjects.com.br/imgres/arquivos/ids/3556755-220-220/fone-de-ouvido-com-alca-philips-shl3000bl/00-estilo-dj---azul.jpg', 
+                  NAME : 'Fone de Ouvido com Alça Philips SHL3000BL/00 Estilo DJ - Azul', 
+                  LINK : 'https://www.walmart.com.br/fone-de-ouvido-com-alca-philips-shl3000bl-00-estilo-dj-azul/acessorios-de-tecnologia/audio-portatil-e-fones-de-ouvido/2610785/pr', 
+                  BRAND : 'Philips',
+                  SELLER : 'Estrela 10',
+                  OLD_VALUE : 126.39,
+                  VALUE : 109.9,
+                }
+                </code>
+                <code>
+                {
+                  IMAGE_URL : 'https://static.wmobjects.com.br/imgres/arquivos/ids/8084709-220-220/', 
+                  NAME : 'Roteador Wireless Link One L1-RW332 300 Mbps', 
+                  LINK : 'http://walmart.com.br/roteador-wireless-link-one-l1-rw332-300-mbps/acessorios-de-tecnologia/4247420/pr', 
+                  BRAND : 'Link One',
+                  SELLER : 'Walmart',
+                  OLD_VALUE : 109.9,
+                  VALUE : 59.9
+                }
+                </code>
+                <code>
+                {
+                  IMAGE_URL : 'https://static.wmobjects.com.br/imgres/arquivos/ids/5858491-220-220/monitor-led-195--lg-20m37aa-widescreen-e-reader-mode.jpg', 
+                  NAME : 'Monitor LED 19,5" LG 20M37AA Widescreen e Reader Mode', 
+                  LINK : 'https://www.walmart.com.br/monitor-led-195-lg-20m37aa-widescreen-e-reader-mode/3636396/pr', 
+                  BRAND : 'LG',
+                  SELLER : 'Walmart',
+                  OLD_VALUE : 499,
+                  VALUE : 389
+                }
+                </code>
+            </fieldset>
+            <form class="register" action="http://localhost:3000/products" method="post">
+                <label>Image URL:</label>
+                <input type="text" class="input-box" name="IMAGE_URL">
+                <label>Name:</label>
+                <input type="text" class="input-box" name="NAME" required>
+                <label>Link:</label>
+                <input type="text" class="input-box" name="LINK">
+                <label>Brand:</label>
+                <input type="text" class="input-box" name="BRAND">
+                <label>Seller:</label>
+                <input type="text" class="input-box" name="SELLER">
+                <label>From value:</label>
+                <input type="text" class="input-box" name="OLD_VALUE">
+                <label>To value:</label>
+                <input type="text" class="input-box" name="VALUE" required>
+                <input type="hidden" name="QUANTITY" value="1">
+                <input id="signupButtonSend" class="btn btn-success btn-sign-up" value="Cadastrar" type="submit" name="signupButtonSend">
+            </form>
+            <input class="btn btn-success btn-sign-up" value="Ir para o carrinho" type="button" name="signupButtonSend" ng-click="go('/cart')">
+        </div>
+    </section>
+</div>

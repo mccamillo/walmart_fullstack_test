@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Open+Sans+Condensed:700">
+    <link rel="shortcut icon" href="https://www.walmart.com.br/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="https://www.walmart.com.br/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,600" /> 
+
+    <!-- endbuild -->
+  </head>
+  <body ng-app="shoppingCartApp">
+
+    <div class="wrapper">
+      <header class="brand-header">
+          <div class="page">
+              <figure class="navbar-brand">
+                  <a href="http://www.walmart.com.br">
+                      <img class="img-responsive" src="//static.wmobjects.com.br/checkout/images/wm-brand.png" alt="Walmart">
+                  </a>
+              </figure>
+          </div>
+      </header>
+      <section class="main-content">
+        <div ng-view=""></div>
+      </section>
+
+      <div id="footer-social-links" class="footer-social-links">
+            <div class="footer-wrapper">
+                <h2 class="title">Walmart.com nas redes sociais</h2>
+                <ul class="social-list">
+                    <li class="social-items"><a href="https://www.facebook.com/walmart.com" title="Facebook" target="_blank"><i class="wm-icon wm-icon-circle icon-facebook"></i><span class="social-name">Facebook</span></a></li>
+                    <li class="social-items"><a href="https://twitter.com/walmartcom/" title="Twitter" target="_blank"><i class="wm-icon wm-icon-circle icon-twitter"></i><span class="social-name">Twitter</span></a></li>
+                    <li class="social-items"><a href="https://plus.google.com/u/0/+MundoWalmart/posts" title="Google Plus" target="_blank"><i class="wm-icon wm-icon-circle icon-google-plus"></i><span class="social-name">Google Plus</span></a></li>
+                    <li class="social-items"><a href="https://www.instagram.com/walmartcom/" title="Instagram" target="_blank"><i class="wm-icon wm-icon-circle icon-instagram"></i><span class="social-name">Instagram</span></a></li>
+                    <li class="social-items"><a href="https://www.youtube.com/user/mundowalmart" title="Youtube" target="_blank"><i class="wm-icon wm-icon-circle icon-youtube"></i><span class="social-name">Youtube</span></a></li>
+                </ul>
+            </div>
+        </div>
+      <div id="footer-institutional" class="footer-institutional">
+        <div class="footer-wrapper" itemscope="" itemtype="//schema.org/LocalBusiness">
+            <p><span itemprop="name">WMB COMÉRCIO ELETRÔNICO LTDA.</span>
+                <br>
+                <meta itemprop="description" content="Walmart.com, o site de vendas online do Walmart Brasil.">CNPJ/MF: 14.314.050/0001-58 Inscrição Estadual: 206.159.582.118
+                <br><span itemprop="address" itemscope="" itemtype="//schema.org/PostalAddress"><span itemprop="streetAddress">Endereço: Avenida Tamboré, 267, 8º andar, Alphaville</span>, <span itemprop="addressLocality">Barueri</span>, <span itemprop="addressRegion">SP</span>, CEP <span itemprop="postalCode">06460-000</span>
+                <br>
+                <meta itemprop="addressCountry" content="BR">
+                </span><a href="mailto:atendimento@walmart.com.br" itemprop="email">atendimento@walmart.com.br</a>
+                <meta itemprop="telephone" content="3003-6000">
+            </p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-css/angular-css.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script src="bower_components/angular-i18n/angular-locale_pt-br.js"></script>
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/cart.js"></script>
+    <script src="scripts/controllers/checkout.js"></script>
+    <script src="scripts/services/products.js"></script>
+    <script src="scripts/services/cart.js"></script>
+    <!-- endbuild -->
+
+</body>
+</html>

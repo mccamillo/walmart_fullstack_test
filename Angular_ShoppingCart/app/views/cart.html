@@ -1,0 +1,100 @@
+<div class="wrapper foo">
+    <section class="main-content my-cart">
+        <div>
+            <div class="msg_div" ng-if="err">{{msg}}</div>
+            <div ng-if="TOTAL_ITEMS() > 0">
+                <div class="page-title clearfix">
+                    <h2> Meu carrinho<span class="my-cart-header-items"> ({{ TOTAL_ITEMS() }} itens)</span></h2>
+                </div>
+                <article class="my-cart-box">
+                    <header>
+                        <ul class="my-cart-header-wrapper clearfix">
+                            <li class="my-cart-header-item header-items">item(s)</li>
+                            <li class="my-cart-header-item header-price">preço</li>
+                            <li class="my-cart-header-item header-quantity">quantidade</li>
+                            <li class="my-cart-header-item header-subtotal">subtotal</li>
+                        </ul>
+                    </header>
+                    <ul class="my-cart-content-wrapper">
+                        <li class="my-cart-content-item" ng-repeat="product in products">
+                            <ul class="my-cart-product-wrapper clearfix">
+                                <li class="my-cart-product-item my-cart-product-description ">
+                                    <figure class="product-list-image"><img class="img-responsive" ng-src="{{product.IMAGE_URL}}" alt="{{product.DESCRIPTION}}"></figure>
+                                    <div class="product-list-item">
+                                        <div>
+                                            <a href="{{product.LINK}}" class="link link-description">{{product.DESCRIPTION}}</a><span class="brand-text"> - {{product.BRAND}}</span>
+                                        </div>
+                                        <div class="my-cart-sub-text">
+                                            <span class="sub-text-first">Vendido e entregue por <a class="openknowMore">{{product.SELLER}}</a></span>
+                                        </div>
+                                        <div class="country-label"></div>
+                                    </div>
+                                </li>
+                                <li class="my-cart-product-item my-cart-product-price">
+                                    <div class="price-normal">De {{product.OLD_VALUE | currency:"R$ "}}</div>
+                                    <div class="price-low">Por {{product.VALUE | currency:"R$ "}}</div>
+                                </li>
+                                <li class="my-cart-product-item my-cart-product-quantity">
+                                    <span class="ui-spinner ui-widget ui-widget-content ui-corner-all">
+		                            	<input class="visible-desktop quantity-spinner ui-spinner-input" name="value" ng-model="product.QUANTITY" maxlength="2" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1" autocomplete="off" role="spinbutton">
+		                            		<a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false" ng-click="addOne($index)">
+		                            			<span class="ui-button-text">
+		                            				<span class="ui-icon ui-icon-triangle-1-n">▲</span>
+                                    </span>
+                                    </a>
+                                    <a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false" ng-click="removeOne($index)">
+                                        <span class="ui-button-text">
+		                            				<span class="ui-icon ui-icon-triangle-1-s">▼</span>
+                                        </span>
+                                    </a>
+                                    </span>
+                                    <a class="link-trash visible-desktop" ng-click="remove($index)">Remover</a>
+                                    <span class="visible-phone my-cart-label-quantity">Qtde.</span>
+                                    <input class="quantity-counter visible-phone input-box" name="value" step="1" min="0" max="10" type="tel" maxlength="2" value="1">
+                                </li>
+                                <li class="my-cart-product-item my-cart-product-subtotal my-cart-product-price">
+                                    <div class="price-low">{{product.SUBTOTAL() | currency:"R$ "}}</div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <footer>
+                        <section class="visible-desktop my-cart-footer-wrapper clearfix">
+                            <article class="my-cart-totals">
+                                <div class="my-cart-totals-item my-cart-subtotal">
+                                    <span class="my-cart-subtotal-item my-cart-subtotal-label">Subtotal ({{ TOTAL_ITEMS() }} itens):</span>
+                                    <span class="my-cart-subtotal-item my-cart-subtotal-text">{{TOTAL_VALUE() | currency:"R$ "}}</span>
+                                </div>
+                                <div class="my-cart-totals-item my-cart-total">
+                                    <span class="my-cart-total-item my-cart-total-label">Valor total:</span>
+                                    <span class="my-cart-total-item my-cart-total-text">{{TOTAL_VALUE() | currency:"R$ "}}</span>
+                                </div>
+                            </article>
+                        </section>
+                    </footer>
+                </article>
+                <div class="buttons-wrapper clearfix">
+                    <button type="button" class="buy-button register-btn btn btn-success" id="btn-finalize-cart" ng-click="go('/main')">Cadastrar novo produto</button>
+                    <button type="button" class="buy-button finish-btn btn btn-success" id="btn-finalize-cart" ng-click="checkout()">Finalizar compra</button>
+                </div>
+            </div>
+            <div ng-if="TOTAL_ITEMS() <= 0">
+                <div class="empty-cart-wrapper clearfix">
+                    <div class="empty-cart-sign">:(</div>
+                    <article class="empty-cart-message">
+                        <div class="empty-cart-header-message">
+                            Ops! Seu carrinho está vazio.
+                        </div>
+                        <div class="empty-cart-content-message">
+                            Para inserir produtos no seu carrinho, clique no botão
+                            <span class="green-text">"Cadastrar novo produto"</span>.
+                        </div>
+                        <div class="back-shopping-buttons buttons-wrapper">
+                            <button type="button" class="buy-button register-btn btn btn-success" id="btn-finalize-cart" ng-click="go('/main')">Cadastrar novo produto</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

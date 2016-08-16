@@ -1,0 +1,418 @@
+html, body {
+    background: #F7F7F7;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    font-family: open_sansregular,Arial,sans-serif;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, :before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    display: block;
+}
+
+figure {
+    margin: 0;
+}
+
+code {
+  display: block;
+  margin: 20px 0;
+}
+
+fieldset#codes {
+  margin-bottom: 50px;
+}
+
+form.register label {
+  margin: 10px 0;
+  display: block;
+}
+
+body {
+    min-height: 100%;
+    height: auto!important;
+    background: #F7F7F7;
+    overflow-y: scroll;
+    margin: 0;
+
+    .wrapper {
+        background: #FFF;
+        max-width: 1320px;
+        min-width: 300px;
+        margin: 0 auto;
+    }
+
+    .page {
+        *zoom: 1;
+        max-width: 49.1875em;
+        padding-left: .3125em;
+        padding-right: .3125em;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .page:after {
+        content: "";
+        display: table;
+        clear: both
+    }
+
+    .brand-header {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-background-origin: content;
+        -moz-background-origin: content;
+        -ms-background-origin: content-box;
+        -o-background-origin: content-box;
+        background-origin: content-box;
+        -webkit-background-clip: content-box;
+        -moz-background-clip: content-box;
+        background-clip: content-box;
+        background-color: #1a75ce;
+        clear: both;
+        height: 60px
+    }
+
+    .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto
+    }
+
+    .navbar-brand {
+        float: left;
+        font-size: 18px;
+        line-height: 20px;
+        height: 60px;
+        width: 130px;
+        padding: 16px 8px
+    }
+
+    .navbar-brand:hover,
+    .navbar-brand:focus {
+        text-decoration: none
+    }
+
+    .main-content {
+        padding-top: 0;
+        margin: 0 auto;
+        background: #fff;
+        padding: 0 10px;
+        color: #666;
+    }
+
+    @media (min-width:768px) {
+        .navbar>.container .navbar-brand {
+            margin-left: -15px
+        }
+    }
+
+    @media (min-width:48em) {
+
+        html,
+        body {
+            height: 100%
+        }
+        
+        .wrapper:after {
+            content: "";
+            display: table;
+            clear: both
+        }
+        
+        .wrapper>header {
+            position: relative
+        }
+        
+        .main-content {
+            min-height: 100%;
+            height: auto!important;
+            height: 100%;
+            margin: -60px auto;
+            padding-top: 60px;
+            padding-bottom: 60px
+        }
+
+        .navbar-brand {
+            padding: 8px 18px 0 8px;
+            width: auto
+        }
+
+        .page {
+            *zoom: 1;
+            max-width: 49.1875em;
+            padding-left: .3125em;
+            padding-right: .3125em;
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 1020px
+        }
+
+        .page:after {
+            content: "";
+            display: table;
+            clear: both
+        }
+    }
+}
+
+
+/* Footer */
+
+
+.global-sprite,
+.mfp-close-btn-in .mfp-close,
+.close-dropdown,
+.blue-star-icon,
+.cart .icon-minicart-buttom,
+.profile .shipping-address .icon,
+.profile .status-aguardando-coleta,
+.profile .status-aguardando-pagamento,
+.profile .status-coleta-realizada,
+.profile .status-em-processo-de-devolucao-para-o-estoque,
+.profile .status-nota-fiscal-emitida,
+.profile .status-pagamento-aprovado,
+.profile .status-pagamento-rejeitado,
+.profile .status-pedido-a-caminho,
+.profile .status-pedido-cancelado,
+.profile .status-pedido-entregue,
+.profile .status-pedido-incluido,
+.profile .status-postagem-solicitada,
+.profile .status-reembolso-estorno-processado-com-sucesso,
+.profile .status-saldo-pre-aprovado,
+.alert-dismissable .close,
+.search-icon,
+.go-to-top-container .go-to-top,
+.topbar-search .list-suggestions .item .icon,
+.topbar-search .list-suggestions .item.autocomplete-suggestion.autocomplete-selected .icon,
+.logo-link,
+.login .wrapper a:hover .icon,
+.login .icon,
+.contact .contact-link.active .contact-icon,
+.contact .contact-link:hover .contact-icon,
+.contact-icon,
+.cart-icon,
+.footer-app-download .app-image,
+.app-store,
+.google-play,
+.footer-social-links .title,
+.amex,
+.visa,
+.mastercard,
+.diners-club,
+.hipercard,
+.elo,
+.itau,
+.bradesco,
+.boleto,
+.site-blindado,
+.norton,
+.ebit,
+.crianca-segura,
+.self-help-icon,
+.self-help-form .search-icon,
+.icon-chat,
+.icon-email,
+.icon-skype,
+.modal-self-help-email-wrapper .form-row.form-row-checkbox .radio,
+.modal-self-help-email-wrapper .form-row.form-row-checkbox .radio.checked,
+.stickers .sticker-options .image,
+.stickers .sticker-gs-usa .image,
+.newsletter-modal .icon-arrow-right,
+.ribbon-recommended,
+.warranty-page .page-title .warranty-product,
+.warranty-page .page-title .change-product {
+    background: url(//static.wmobjects.com.br/webstore/images/sprites/global-sc2ff3ce944.png) no-repeat
+}
+
+.clearfix:before,
+.footer-wrapper:before,
+.clearfix:after,
+.footer-wrapper:after {
+    content: " ";
+    display: table
+}
+
+.clearfix:after,
+.footer-wrapper:after {
+    clear: both
+}
+
+@font-face {
+    font-family: wm-icons;
+    src: url(//static.wmobjects.com.br/webstore/fonts/wm-icons.eot?097cbf8db4080988d87d54a32f2ee76d);
+    src: url(//static.wmobjects.com.br/webstore/fonts/wm-icons.eot?097cbf8db4080988d87d54a32f2ee76d?#iefix) format('embedded-opentype'), url(//static.wmobjects.com.br/webstore/fonts/wm-icons.ttf?097cbf8db4080988d87d54a32f2ee76d) format('truetype'), url(//static.wmobjects.com.br/webstore/fonts/wm-icons.woff?097cbf8db4080988d87d54a32f2ee76d) format('woff'), url(//static.wmobjects.com.br/webstore/fonts/wm-icons.svg?097cbf8db4080988d87d54a32f2ee76d) format('svg')
+}
+
+.wm-icon {
+    font-family: wm-icons;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.footer-social-links {
+    text-align: center
+}
+
+.footer-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: table;
+    color: #999
+}
+
+.footer-wrapper a {
+    color: #1a75ce
+}
+
+.footer-wrapper a:hover {
+    color: #f37b20
+}
+
+.footer-wrapper .wm-icon-circle {
+    float: left;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #1a75ce;
+    color: #1a75ce;
+    font-size: 32px;
+    text-align: center;
+    line-height: 50px
+}
+
+.footer-wrapper .title {
+    font-size: 18px;
+    line-height: 26px;
+    color: #1a75ce;
+    font-weight: 400
+}
+
+.footer-wrapper .description {
+    font-size: 16px;
+    color: #666
+}
+
+
+.footer-social-links .title {
+    background-position: 0 -1036px;
+    height: 20px;
+    width: 169px;
+    display: inline-block;
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
+    margin-bottom: 20px
+}
+
+.footer-social-links .social-items {
+    display: inline-block
+}
+
+.footer-social-links .social-name {
+    font-size: 0
+}
+
+.footer-social-links .wm-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    line-height: 38px;
+    margin: 0 8px;
+    color: inherit
+}
+
+.footer-social-links .wm-icon:hover {
+    border-color: #f37b20
+}
+
+.icon-facebook:before {
+    content: "\f133"
+}
+
+.icon-google-plus:before {
+    content: "\f135"
+}
+
+.icon-gplus:before {
+    content: "\f136"
+}
+
+.icon-twitter:before {
+    content: "\f155"
+}
+
+.icon-youtube:before {
+    content: "\f156"
+}
+
+.icon-instagram:before {
+    content: "\f144"
+}
+
+.footer-institutional .footer-wrapper {
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+    padding: 10px 0
+}
+
+.footer-institutional p {
+    margin-bottom: 25px
+}
+
+
+.title {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 0 20px 8px;
+}
+
+.btn-sign-up {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+
+.register-btn {
+  float: left;
+}
+
+.msg_div {
+    background-color: rgba(241, 79, 79, 0.68);
+    margin: 15px 0;
+    min-height: 25px;
+    line-height: 25px;
+    padding: 20px;
+    border-radius: 7px;
+    color: #fff;
+}
+
+.back-button {
+    float: right;
+    margin: 20px 0;
+}
